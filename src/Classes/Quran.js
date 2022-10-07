@@ -1,5 +1,5 @@
-//import quranJSON from './quran.json'
-let i = require('./quran.json')
+import _ from 'lodash';
+import quranJSON from './quran.json'
 export function Quran()
 {
     this.Sourahs = quranJSON

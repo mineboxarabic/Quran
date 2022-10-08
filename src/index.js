@@ -1,28 +1,43 @@
 import { Quran } from './Classes/Quran.js'
+import "./stylesheet.css"
 let body = document.querySelector('body')
-let form = document.createElement('form')
 let input = document.createElement('input')
 let title = document.createElement('label')
+let theSourahDiv = document.createElement('div')
+let h3 = document.createElement('h3')
 title.textContent = 'Look for any sourah'
 body.appendChild(title)
 input.setAttribute("type","text")
-form.appendChild(input)
-body.appendChild(form)
+body.appendChild(input)
 
-
+body.appendChild(theSourahDiv)
+theSourahDiv.appendChild(h3)
 let quran = new Quran
-let name = 'الفاتحة'
-for(let i = 0 ; i < quran.getSourah(name)?.verses.length; i++){
-    let h3 = document.createElement('h3')
-    body.appendChild(h3)
-    h3.textContent = quran.getSourah(name).verses[i].text + `{${quran.getSourah(name).verses[i].id}}`
-}
-input.addEventListener("keypress",function lookForSourah(event)
+
+
+
+input.addEventListener("keyup",function lookForSourah(event)
 {
-    if(event.key == 'Enter')
+    let name = input.value
+    quran.showSourah(name,theSourahDiv)
+    /*if(quran.isSourah(name))
     {
-        console.log(quran.getSourah(input.value))
-        console.log('test')
+        console.log('true')
+        for(let i = 0 ; i < quran.getSourah(name).length; i++){
+            
+        let p = quran.getSourah(name)[i];
+        console.log(p)
+        theSourahDiv.appendChild(p)
+        }
     }
+    else
+    {
+        if(theSourahDiv.hasChildNodes())
+        {
+            removeAllChildNodes(theSourahDiv)
+        }
+        
+
+    }*/
     
 })

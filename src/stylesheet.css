@@ -4,3 +4,36 @@ body
     background-color: aqua;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+div
+{
+    border-radius: 25px;
+    color: black;
+    
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    
+    margin: 10%;
+    border: 3px solid;
+    background-image: linear-gradient(to bottom right, white, wheat);
+    overflow-wrap: break-word;
+}
+@font-face {
+    font-family: quran;
+    src: url(Classes/Al Qalam Quran Majeed.ttf);
+  }
+.Sourah
+{
+    color: black;
+    text-shadow: 1px 1px 4px white;
+    font-family: quran;
+    text-align: end;
+}
+.SourahSEP
+{
+    color: green;
+    text-shadow: 1px 1px 4px white;
+    font-family: quran;
+    text-align: end;
+}

@@ -1,23 +1,23 @@
+/*https://colorhunt.co/palette/e1ffb1c7f2a4b6e388fcffb2*/
 body 
 {
     color: red;
-    background-color: aqua;
+    background-color: #FCFFB2;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 div
 {
+    Overflow-y:scroll;
+    height:1000px;
+    direction:rtl;
     border-radius: 25px;
-    color: black;
-    
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    
+    color: rgb(239, 221, 146);
     margin: 10%;
     border: 3px solid;
-    background-image: linear-gradient(to bottom right, white, wheat);
-    overflow-wrap: break-word;
+    background-image: linear-gradient(to bottom right, white, #B6E388);
+    background-attachment: fixed;
+    
 }
 @font-face {
     font-family: quran;
@@ -25,15 +25,30 @@ div
   }
 .Sourah
 {
+    
+    display:contents;
+    cursor: pointer;
+    font-size: 150%;
     color: black;
     text-shadow: 1px 1px 4px white;
     font-family: quran;
     text-align: end;
+    transition: font-size 0.5s;
 }
 .SourahSEP
 {
+    display:contents;
+    font-size: 150%;
     color: green;
+    border:2ch solid;
     text-shadow: 1px 1px 4px white;
     font-family: quran;
     text-align: end;
+}
+.Sourah:hover
+{
+    font-size: 175%;
+    color: white;
+    text-shadow: 1px 1px 10px white;
+    font-weight: 500;
 }
